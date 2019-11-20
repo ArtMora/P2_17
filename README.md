@@ -17,4 +17,6 @@ We pick a category and a question is presented with 20 seconds to answer them
 
 ![](IMG7549796776958012386.jpg)
 
+_________________________________
+Team Member Duties:
 
