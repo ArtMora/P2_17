@@ -31,5 +31,6 @@ Andrew Nwalie- main interface and stats interface \
 Abdus Sami Yakoob- fun fact category interface \
 Jacob Zahn- general questions category interface \
 
-
+Progress and Plan: \
+So far just the sketch has been completed but we plan to have 2 to 3 questions per category and have a working interface for each one which will probably be very similar.
 
