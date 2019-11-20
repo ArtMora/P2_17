@@ -12,9 +12,9 @@ Jacob Zahn
 
 A trivia game currently with 4 categories.\
 History \
-Sports\ 
+Sports
 
-Fun facts\ 
+Fun facts
 
 General Knowledge\
 We pick a category and a question is presented with 20 seconds to answer them.
