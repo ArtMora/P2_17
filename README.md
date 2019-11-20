@@ -1,13 +1,15 @@
 # P2_17
 Team Members:
-_____________________________
+
+![](Group.JPG)
+
 Arturo Mora\
 Enrique Cervantes\
 Chigozie Andrew Nwalie\
 Abdus Sami Yakoob\
 Jacob Zahn
 
-
+_______________________________________
 ![](IMG3812690036288305170.jpg)
 
 A trivia game currently with 4 categories.\
