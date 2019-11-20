@@ -1,5 +1,5 @@
 # P2_17
-###Team Members:
+## Team Members:
 
 ![](Group.JPG)
 
@@ -10,7 +10,8 @@ Abdus Sami Yakoob\
 Jacob Zahn
 
 _______________________________________
-###General Sketch
+## General Sketch
+
 ![](IMG3812690036288305170.jpg)
 
 A trivia game currently with 4 categories.\
@@ -27,13 +28,15 @@ If answered correctly the correct answer is highlighted in green.
 After the done button is pushed the stats page shows how many questions was answered and how many of those were correct for each category. \
 the try again button resets the game stats.
 ____________________________________________________
-###Team Duties:
+## Team Duties:
+
 Arturo Mora - History cateory questions interface \
 Enrique Cervantes- Sports category questions interface \
 Andrew Nwalie- main interface and stats interface \
 Abdus Sami Yakoob- fun fact category interface \
 Jacob Zahn- general questions category interface 
 _______________________________________________
-###Progress and Future Plan: \
+## Progress and Future Plan:
+
 So far just the sketch has been completed but we plan to have 2 to 3 questions per category and have a working interface for each one which will probably be very similar.
 
