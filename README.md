@@ -1,2 +1,13 @@
 # P2_17
-Project 2 for Human Computer Interaction
+Team Members:
+_____________________________
+Arturo Mora
+Enrique Cervantes
+Chigozie Andrew Nwalie
+Abdus Sami Yakoob
+Jacob Zahn
+
+
+
+
+
