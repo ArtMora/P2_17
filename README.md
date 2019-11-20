@@ -1,10 +1,10 @@
 # P2_17
 Team Members:
 _____________________________
-Arturo Mora
-Enrique Cervantes
-Chigozie Andrew Nwalie
-Abdus Sami Yakoob
+Arturo Mora\n
+Enrique Cervantes\n
+Chigozie Andrew Nwalie\n
+Abdus Sami Yakoob\n
 Jacob Zahn
 
 
