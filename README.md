@@ -3,11 +3,11 @@
 
 ![](Group.JPG)
 
-Arturo Mora\
+**Arturo Mora\
 Enrique Cervantes\
 Chigozie Andrew Nwalie\
 Abdus Sami Yakoob\
-Jacob Zahn
+Jacob Zahn**
 
 
 ## General Sketch
@@ -21,7 +21,7 @@ Fun facts \
 General Knowledge \
 We pick a category and a question is presented with 20 seconds to answer them.
 
-If answered Inccorectly the question is highlighted red and the correct answer is highlighted green. \
+If answered Incorectly the question is highlighted red and the correct answer is highlighted green. \
 If answered correctly the correct answer is highlighted in green.
 
 ![](IMG7549796776958012386.jpg)
@@ -31,11 +31,11 @@ the try again button resets the game stats.
 
 ## Team Duties:
 
-Arturo Mora - History cateory questions interface \
-Enrique Cervantes- Sports category questions interface \
-Andrew Nwalie- main interface and stats interface \
-Abdus Sami Yakoob- fun fact category interface \
-Jacob Zahn- general questions category interface 
+**Arturo Mora** - History Category Questions Interface \
+**Enrique Cervantes** - Sports Category Questions Interface \
+**Andrew Nwalie** - Main Interface and Stats Interface \
+**Abdus Sami Yakoob** - Fun Fact Category Interface \
+**Jacob Zahn** - General Questions Category Interface 
 
 
 ## Progress and Future Plan:
