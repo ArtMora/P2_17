@@ -25,11 +25,11 @@ After the done button is pushed the stats page shows how many questions was answ
 the try again button resets the game stats.
 
 Team Duties:
-Arturo Mora - History cateory questions interface
-Enrique Cervantes- Sports category questions interface
- Andrew Nwalie- main interface and stats interface
-Abdus Sami Yakoob- fun fact category interface
-Jacob Zahn- general questions category interface
+Arturo Mora - History cateory questions interface \
+Enrique Cervantes- Sports category questions interface \
+Andrew Nwalie- main interface and stats interface \
+Abdus Sami Yakoob- fun fact category interface \
+Jacob Zahn- general questions category interface \
 
 
 
