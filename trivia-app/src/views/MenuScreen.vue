@@ -1,44 +1,17 @@
 <template>
-    <view class='container'>
-        <view class='banner'>
-            <text class='hero-text'>Texas Tech Trivia Game</text>
-        </view>
-        <touchable-opacity class='button' :on-press="startGeneralKnowledge">
-            <text>Press to start General Knowledge Trivia</text>
-        </touchable-opacity>
-        <touchable-opacity class='button' :on-press="startHistory">
-            <text>Press to start History Trivia</text>
-        </touchable-opacity>
-        <touchable-opacity class='button' :on-press="startFunFacts">
-            <text>Press to start Fun Facts Trivia</text>
-        </touchable-opacity>
-        <touchable-opacity class='button' :on-press="startSports">
-            <text>Press to start Sports Trivia</text>
-        </touchable-opacity>
-    </view>
+    <div>
+        <h1>Texas Tech Trivia Game</h1>
+        <button>General Knowledge</button>
+        <button>History</button>
+        <button>Fun Facts</button>
+        <button>Sports</button>
+        <button>Stats</button>
+    </div>
 </template>
 
 <script>
 export default {
-    props: {
-        navigation: {
-            type: Object
-        }
-    },
-    methods: {
-        startHistory: function() {
-            this.navigation.navigate('History');
-        },
-        startGeneralKnowledge: function() {
-            this.navigation.navigate('GeneralKnowledge');
-        },
-        startFunFacts: function() {
-            this.navigation.navigate('FunFacts');
-        },
-        startSports: function() {
-            this.navigation.navigate('Sports');
-        }
-    }
+    
 }
 </script>
 
