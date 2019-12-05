@@ -1,28 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <main-navigation />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { StackNavigator } from 'vue-native-router';
+import MenuScreen from './screens/MenuScreen.vue';
+import FunFactsScreen from './screens/FunFactsScreen.vue';
+import GeneralKnowledgeScreen from './screens/GeneralKnowledgeScreen.vue';
+import HistoryScreen from './screens/HistoryScreen.vue';
+import SportsScreen from './screens/SportsScreen.vue';
+
+const MainNavigation = StackNavigator(
+    {
+        Menu: MenuScreen,
+        FunFacts: FunFactsScreen,
+        GeneralKnowledge: GeneralKnowledgeScreen,
+        History: HistoryScreen,
+        Sports: SportsScreen
+    },
+    {
+        initialRouteName: 'Menu'
+    }
+)
 
 export default {
-  name: 'app',
   components: {
-    HelloWorld
+    MainNavigation
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
