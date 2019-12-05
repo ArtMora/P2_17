@@ -1,16 +1,17 @@
 <template>
     <div>
         <h1>Texas Tech Trivia Game</h1>
-        <button>General Knowledge</button>
-        <button>History</button>
-        <button>Fun Facts</button>
-        <button>Sports</button>
+        <router-link to="/generalknowledge" tag="button">General Knowledge</router-link>
+        <router-link to="/history" tag="button">History</router-link>
+        <router-link to="/funfacts" tag="button">Fun Facts</router-link>
+        <router-link to="/sports" tag="button">Sports</router-link>
         <button>Stats</button>
     </div>
 </template>
 
 <script>
 export default {
+    
     
 }
 </script>
