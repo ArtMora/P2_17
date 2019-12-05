@@ -6,15 +6,10 @@
 
 <script>
 export default {
-    props: {
-        navigation: {
-            type: Object
-        }
-    },
-    name: "Sports"
+    
 }
 </script>
 
-<style scoped>
+<style >
 
 </style>

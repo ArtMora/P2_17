@@ -6,15 +6,10 @@
 
 <script>
 export default {
-    props: {
-        navigation: {
-            type: Object
-        }
-    },
-    name: "History"
+    
 }
 </script>
 
-<style scoped>
+<style >
 
 </style>

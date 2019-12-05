@@ -4,11 +4,7 @@
 
 <script>
 export default {
-    props: {
-        navigation: {
-            type: Object
-        }
-    }
+    
 }
 </script>
 
