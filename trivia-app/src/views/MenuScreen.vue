@@ -6,11 +6,11 @@
         <fun-facts v-if="takingFF===1" v-bind:ffScore="ffScore"/>
         <sports v-if="takingS===1" v-bind:sScore="sScore"/>
         <stats v-if="statsHidden===0" v-bind:ffScore="ffScore" :gkScore="gkScore" :hScore="hScore" :sScore="sScore"/>
-        <button class="button button1" @click="takingGK = 1">General Knowledge</button>
-        <button class="button button2" @click="takingH = 1">History</button>
-        <button class="button button3" @click="takingFF = 1">Fun Facts</button>
-        <button class="button button4" @click="takingS = 1">Sports</button>
-        <button class="button button5" @click="statsHidden = (statsHidden + 1) % 2">Stats</button>
+        <button class="button button1" @click="takeQuiz(1)" :disabled='btnsDisabled'>General Knowledge</button>
+        <button class="button button2" @click="takeQuiz(2)" :disabled='btnsDisabled'>History</button>
+        <button class="button button3" @click="takeQuiz(3)" :disabled='btnsDisabled'>Fun Facts</button>
+        <button class="button button4" @click="takeQuiz(4)" :disabled='btnsDisabled'>Sports</button>
+        <button class="button button5" @click="toggleStats()" :disabled='btnsDisabled'>Stats</button>
     </div>
 </template>
 
@@ -23,7 +23,7 @@ import Sports from '../components/Sports';
 
 
 export default {
-    name: "MenuScreen",
+    name: "menu-screen",
     components: {
         Stats,
         FunFacts,
@@ -44,7 +44,13 @@ export default {
             takingGK: 0,
             takingH: 0,
             takingS: 0,
+            disableBtns: 0,
         };
+    },
+    computed: {
+        btnsDisabled: function(){
+            return this.disableBtns===1;
+        }
     },
     watch: {
         state: function (val) {
@@ -101,13 +107,54 @@ export default {
             });
             return gkSum >= 3 && hSum >= 3 && ffSum >= 3 && sSum >= 3;
         },
+        takeQuiz: function(q) {
+            this.hideStats();
+            if(this.state===0) {
+                this.nextState();
+            }
+            this.disableBtns = 1;
+            switch(q){
+                case 1:
+                    this.takeGKQuiz();
+                    break;
+                case 2:
+                    this.takeHQuiz();
+                    break;
+                case 3:
+                    this.takeFFQuiz();
+                    break;
+                case 4:
+                    this.takeSQuiz();
+                    break;
+            }
+            
 
+        },
+        takeGKQuiz: function() {
+            this.takingQuiz = 1;
+            this.takingGK =1;
+        },
+        takeHQuiz: function() {
+            this.takingQuiz = 1;
+            this.takingH =1;
+        },
+        takeFFQuiz: function() {
+            this.takingQuiz = 1;
+            this.takingFF =1;
+        },
+        takeSQuiz: function() {
+            this.takingQuiz = 1;
+            this.takingS =1;
+        },
         showStats: function() {
             this.statsHidden = 0;
         },
         hideStats: function() {
             this.statsHidden = 1;
         },
+        toggleStats: function() {
+            this.statsHidden = (this.statsHidden + 1) % 2;
+        }
     },
     
 }
@@ -129,7 +176,7 @@ export default {
 }
 
 .button {
-  border: 2px black;
+  border: 2px solid black;
   color: white;
   padding: 15px 32px;
   text-align: center;
