@@ -6,10 +6,10 @@
         <fun-facts v-if="takingFF===1" v-bind:ffScore="ffScore"/>
         <sports v-if="takingS===1" v-bind:sScore="sScore"/>
         <stats v-if="statsHidden===0" v-bind:ffScore="ffScore" :gkScore="gkScore" :hScore="hScore" :sScore="sScore"/>
-        <button class="button button1" @click="takeQuiz(1)" :disabled='btnsDisabled'>General Knowledge</button>
-        <button class="button button2" @click="takeQuiz(2)" :disabled='btnsDisabled'>History</button>
-        <button class="button button3" @click="takeQuiz(3)" :disabled='btnsDisabled'>Fun Facts</button>
-        <button class="button button4" @click="takeQuiz(4)" :disabled='btnsDisabled'>Sports</button>
+        <button class="button button1" @click="takeQuiz(1)" :disabled='btnsDisabled || tookGK===1'>General Knowledge</button>
+        <button class="button button2" @click="takeQuiz(2)" :disabled='btnsDisabled || tookH===1'>History</button>
+        <button class="button button3" @click="takeQuiz(3)" :disabled='btnsDisabled || tookFF===1'>Fun Facts</button>
+        <button class="button button4" @click="takeQuiz(4)" :disabled='btnsDisabled || tookS===1'>Sports</button>
         <button class="button button5" @click="toggleStats()" :disabled='btnsDisabled'>Stats</button>
     </div>
 </template>
@@ -40,6 +40,10 @@ export default {
             state: 0,//0 - has not started a quiz, 1 - has started a quiz, 2 - has completed all quizzes
             statsHidden: 0,
             takingQuiz: 0,
+            tookFF: 0,
+            tookGK: 0,
+            tookH: 0,
+            tookS: 0,
             takingFF: 0,
             takingGK: 0,
             takingH: 0,
@@ -50,7 +54,8 @@ export default {
     computed: {
         btnsDisabled: function(){
             return this.disableBtns===1;
-        }
+        },
+        
     },
     watch: {
         state: function (val) {
@@ -79,6 +84,7 @@ export default {
             this.hScore = [0, 0, 0];
             this.ffScore = [0, 0, 0];
             this.sScore = [0, 0, 0];
+            this.statsHidden = 1;
         },
         nextState: function() {
             this.state = (this.state + 1) % 3;
@@ -144,7 +150,7 @@ export default {
         },
         takeSQuiz: function() {
             this.takingQuiz = 1;
-            this.takingS =1;
+            this.takingS = 1;
         },
         showStats: function() {
             this.statsHidden = 0;
@@ -154,6 +160,32 @@ export default {
         },
         toggleStats: function() {
             this.statsHidden = (this.statsHidden + 1) % 2;
+        },
+        finishedQuiz: function(quizNum, score) {
+            this.takingQuiz=0;
+            switch(quizNum){
+                case 1:
+                    this.gkScore = score;
+                    this.tookGK = 1;
+                    this.takingGK = 0;
+                    break;
+                case 2:
+                    this.hScore = score;
+                    this.tookH = 1;
+                    this.takingH = 0;
+                    break;
+                case 3:
+                    this.ffScore = score;
+                    this.tookFF = 1;
+                    this.takingFF = 0;
+                    break;
+                case 4:
+                    this.sScore = score;
+                    this.tookS = 1;
+                    this.takingS = 0;
+                    break;
+            }
+            this.disableBtns = 0;
         }
     },
     

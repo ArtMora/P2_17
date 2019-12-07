@@ -1,10 +1,10 @@
 <template>
     <div>
         <p>Question: {{ question }} </p>
-        <button> {{ answer1 }}</button>
-        <button> {{ answer2 }}</button>
-        <button> {{ answer3 }}</button>
-        <button> {{ answer4 }}</button>
+        <button @click="checkA(1)"> {{ answer1 }}</button>
+        <button @click="checkA(2)"> {{ answer2 }}</button>
+        <button @click="checkA(3)"> {{ answer3 }}</button>
+        <button @click="checkA(4)"> {{ answer4 }}</button>
     </div>
 </template>
 
@@ -37,7 +37,9 @@ export default {
 
     },
     methods: {
-
+        checkA: function(a) {
+            this.$parent.checkAnswer(a);
+        }
     },
 }
 </script>
