@@ -1,24 +1,35 @@
 <template>
     <div>
         <h1>Texas Tech Trivia Game</h1>
-        <router-link to="/generalknowledge" tag="button">General Knowledge</router-link>
-        <router-link to="/history" tag="button">History</router-link>
-        <router-link to="/funfacts" tag="button">Fun Facts</router-link>
-        <router-link to="/sports" tag="button">Sports</router-link>
-        <button @click="statsHidden = (statsHidden + 1) % 2">Stats</button>
-        
+        <general-knowledge v-if="takingGK===1" v-bind:gkScore="gkScore"/>
+        <history v-if="takingH===1" v-bind:hScore="hScore"/>
+        <fun-facts v-if="takingFF===1" v-bind:ffScore="ffScore"/>
+        <sports v-if="takingS===1" v-bind:sScore="sScore"/>
         <stats v-if="statsHidden===0" v-bind:ffScore="ffScore" :gkScore="gkScore" :hScore="hScore" :sScore="sScore"/>
-        
+        <button class="button button1" @click="takingGK = 1">General Knowledge</button>
+        <button class="button button2" @click="takingH = 1">History</button>
+        <button class="button button3" @click="takingFF = 1">Fun Facts</button>
+        <button class="button button4" @click="takingS = 1">Sports</button>
+        <button class="button button5" @click="statsHidden = (statsHidden + 1) % 2">Stats</button>
     </div>
 </template>
 
 <script>
 import Stats from '../components/Stats';
+import History from '../components/History';
+import FunFacts from '../components/FunFacts';
+import GeneralKnowledge from '../components/GeneralKnowledge';
+import Sports from '../components/Sports';
+
 
 export default {
     name: "MenuScreen",
     components: {
-        Stats
+        Stats,
+        FunFacts,
+        GeneralKnowledge,
+        History,
+        Sports
     },
     data: function() {
         return {
@@ -28,6 +39,11 @@ export default {
             sScore:     [0, 0, 0],
             state: 0,//0 - has not started a quiz, 1 - has started a quiz, 2 - has completed all quizzes
             statsHidden: 0,
+            takingQuiz: 0,
+            takingFF: 0,
+            takingGK: 0,
+            takingH: 0,
+            takingS: 0,
         };
     },
     watch: {
@@ -85,12 +101,13 @@ export default {
             });
             return gkSum >= 3 && hSum >= 3 && ffSum >= 3 && sSum >= 3;
         },
-        toggleStats: function() {
-            this.statsHidden = (this.statsHidden + 1) % 2;
+
+        showStats: function() {
+            this.statsHidden = 0;
         },
-        statsNotHidden: function() {
-            return this.statsHidden === 0;
-        }
+        hideStats: function() {
+            this.statsHidden = 1;
+        },
     },
     
 }
@@ -111,17 +128,27 @@ export default {
     align-items: center;
 }
 
-.hero-text {
-    font-size: 20;
-}
-
 .button {
-    margin: 40;
-    background-color: #55dd55;
-    border-radius: 40;
-    height: 80;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border: 2px black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%;
+}
+.button1 {background-color: green;}
+.button2 {background-color: blue;}
+.button3 {background-color: red;}
+.button4 {
+    background-color: yellow;
+    color:black;
+}
+.button5 {
+    background-color: white;
+    color:black;
 }
 </style>
