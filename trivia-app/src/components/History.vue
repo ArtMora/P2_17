@@ -7,7 +7,24 @@
 
 <script>
 export default {
-    
+    name: "history",
+    props: {
+        hScore: {
+            type: Array,
+            required: true
+        }
+    },
+    data: function() {
+        return {
+           
+        };
+    },
+    created: function() {
+        
+    },
+    methods: {
+
+    },
 }
 </script>
 

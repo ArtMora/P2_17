@@ -6,7 +6,24 @@
 
 <script>
 export default {
-    
+    name: "sports",
+    props: {
+        sScore: {
+            type: Array,
+            required: true
+        }
+    },
+    data: function() {
+        return {
+           
+        };
+    },
+    created: function() {
+        
+    },
+    methods: {
+
+    },
 }
 </script>
 

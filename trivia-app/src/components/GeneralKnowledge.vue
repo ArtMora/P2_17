@@ -6,7 +6,24 @@
 
 <script>
 export default {
-    
+    name: "general-knowledge",
+    props: {
+        gkScore: {
+            type: Array,
+            required: true
+        }
+    },
+    data: function() {
+        return {
+           
+        };
+    },
+    created: function() {
+        
+    },
+    methods: {
+
+    },
 }
 </script>
 
