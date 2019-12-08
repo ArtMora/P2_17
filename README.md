@@ -10,7 +10,7 @@ Abdus Sami Yakoob\
 Jacob Zahn**
 
 
-https://im2.ezgif.com/tmp/ezgif-2-02939b701d05.gif
+![](https://im2.ezgif.com/tmp/ezgif-2-02939b701d05.gif)
 
 ## General Sketch
 
