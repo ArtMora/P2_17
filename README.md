@@ -43,5 +43,9 @@ the try again button resets the game stats.
 
 ![](https://im2.ezgif.com/tmp/ezgif-2-02939b701d05.gif)
 
+![](Screenshot (22).png)
+![](Screenshot (23).png)
+
+
 For our project we did a trivia game about Texas Tech. 
 
