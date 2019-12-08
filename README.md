@@ -10,7 +10,6 @@ Abdus Sami Yakoob\
 Jacob Zahn**
 
 
-![](https://im2.ezgif.com/tmp/ezgif-2-02939b701d05.gif)
 
 ## General Sketch
 
@@ -41,6 +40,8 @@ the try again button resets the game stats.
 
 
 ## Tech Trivia:
+
+![](https://im2.ezgif.com/tmp/ezgif-2-02939b701d05.gif)
 
 For our project we did a trivia game about Texas Tech. 
 
