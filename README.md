@@ -43,8 +43,8 @@ the try again button resets the game stats.
 
 ![](https://im2.ezgif.com/tmp/ezgif-2-02939b701d05.gif)
 
-![](Screenshot (22).png)
-![](Screenshot (23).png)
+![](Screenshot (22).jpg)
+![](Screenshot (23).jpg)
 We colaborated together and used unity and C# for our trivia project.
 
  
