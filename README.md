@@ -33,10 +33,10 @@ the try again button resets the game stats.
 ## Team Duties:
 
 **Arturo Mora** - Victory Interface \
-**Enrique Cervantes** - Game Over Interface \
+**Enrique Cervantes** - start menu \
 **Andrew Nwalie** - Questions interface \
 **Abdus Sami Yakoob** - music and sound effects \
-**Jacob Zahn** - start menu 
+**Jacob Zahn** - game over interface
 
 
 ## Tech Trivia:
