@@ -1,10 +1,10 @@
 <template>
     <div>
         <h1>Texas Tech Trivia Game</h1>
-        <general-knowledge v-if="takingGK===1" v-bind:gkScore="gkScore"/>
-        <history v-if="takingH===1" v-bind:hScore="hScore"/>
-        <fun-facts v-if="takingFF===1" v-bind:ffScore="ffScore"/>
-        <sports v-if="takingS===1" v-bind:sScore="sScore"/>
+        <general-knowledge @score-return="finishedQuiz" v-if="takingGK===1" v-bind:gkScore="gkScore"/>
+        <history @score-return="finishedQuiz" v-if="takingH===1" v-bind:hScore="hScore"/>
+        <fun-facts @score-return="finishedQuiz" v-if="takingFF===1" v-bind:ffScore="ffScore"/>
+        <sports @score-return="finishedQuiz" v-if="takingS===1" v-bind:sScore="sScore"/>
         <stats v-if="statsHidden===0" v-bind:ffScore="ffScore" :gkScore="gkScore" :hScore="hScore" :sScore="sScore"/>
         <button class="button button1" @click="takeQuiz(1)" :disabled='btnsDisabled || tookGK===1'>General Knowledge</button>
         <button class="button button2" @click="takeQuiz(2)" :disabled='btnsDisabled || tookH===1'>History</button>

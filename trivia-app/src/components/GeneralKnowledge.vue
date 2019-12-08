@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>GeneralKnowledge</h1>
-        <question v-bind:question="currentQuestion" :answers="currentAnswers" :correct="currentCorrect"/>
+        <question @clicked="checkAnswer" v-bind:question="currentQuestion" :answers="currentAnswers" :correct="currentCorrect"/>
     </div>
 </template>
 
@@ -65,7 +65,9 @@ export default {
                 this.returnScore();
         },
         returnScore: function(){
-            this.$parent.finishedQuiz(1,this.gkScore);
+            //let score = this.gkScore;
+            this.$emit("score-return",1,this.gkScore);
+            //this.$parent.finishedQuiz(1,this.gkScore);
         }
     },
 }

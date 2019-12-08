@@ -38,7 +38,7 @@ export default {
     },
     methods: {
         checkA: function(a) {
-            this.$parent.checkAnswer(a);
+            this.$emit('clicked',a);
         }
     },
 }
