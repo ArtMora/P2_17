@@ -40,7 +40,7 @@ the try again button resets the game stats.
 **Jacob Zahn** - General Questions Category Interface 
 
 
-## Progress and Future Plan:
+## Tech Trivia:
 
-So far just the sketch has been completed but we plan to have 2 to 3 questions per category and have a working interface for each one which will probably be very similar.
+For our project we did a trivia game about Texas Tech. 
 
