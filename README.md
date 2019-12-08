@@ -45,7 +45,7 @@ the try again button resets the game stats.
 
 ![](Screenshot (22).png)
 ![](Screenshot (23).png)
+We colaborated together and used unity and C# for our trivia project.
 
-
-For our project we did a trivia game about Texas Tech. 
+ 
 
